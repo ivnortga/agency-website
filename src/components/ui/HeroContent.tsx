@@ -16,18 +16,18 @@ export default function HeroContent() {
             <p
                 className="hero-text-1 text-4xl lg:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b text-white max-w-4xl text-center mix-blend-difference"
             >
-                Transforming Ideas into Digital Excellence
+                Videoclips y visualizers creativos para artistas en Canarias
             </p>
             <p
                 className="hero-text-2 text-sm lg:textlg relative z-20 bg-clip-text text-transparent bg-gradient-to-b text-white py-8 max-w-sm md:max-w-4xl text-center"
             >
-                Creating bespoke, innovative web solutions that drive your business forward.
+                Producción audiovisual profesional que eleva tu música al siguiente nivel.
             </p>
             <button
                 type="button"
                 className="hero-button text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center creativeBtn"
             >
-                <span>Get Started</span>
+                <span>Solicitar Presupuesto</span>
             </button>
         </div>
     )

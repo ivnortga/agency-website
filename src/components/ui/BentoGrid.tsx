@@ -36,6 +36,8 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
+  price,
+  icon,
 }: {
   className?: string;
   id: number;
@@ -46,6 +48,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   descriptionClassName?: string;
   spareImg?: string;
+  price?: string;
+  icon?: string;
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
@@ -83,7 +87,7 @@ export const BentoGridItem = ({
       }}
     >
       {/* add img divs */}
-      <div className={`${id === 7 && "flex justify-center"} h-full`}>
+      <div className={`${id === 4 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
             <img
@@ -113,6 +117,13 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
+          {/* Show icon and price for pricing cards */}
+          {icon && price && (
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-5xl">{icon}</span>
+              <span className="text-3xl font-bold text-white">{price}</span>
+            </div>
+          )}
 
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
           {/* remove mb-2 mt-2 */}
@@ -145,7 +156,7 @@ export const BentoGridItem = ({
               <ProgLangList />
             </div>
           )}
-          {id === 7 && (
+          {id === 4 && (
             <div className="mt-5 relative">
               {/* button border magic from tailwind css buttons  */}
               {/* add rounded-md h-8 md:h-8, remove rounded-full */}
@@ -160,7 +171,7 @@ export const BentoGridItem = ({
               <button
                 type="button"
                 className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center creativeBtn" >
-                <span>Let&apos;s Talk</span>
+                <span>Hablemos</span>
               </button>
             </div>
           )}

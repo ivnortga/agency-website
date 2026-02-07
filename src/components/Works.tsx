@@ -1,12 +1,11 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { workItems } from "../data/index";
-import Image from "next/image";
 
 export default function Works() {
     return (
         <section id="works" className="relative flex flex-col w-full h-full bg-black py-20">
             <h3 className="text-xl text-white z-50 container pb-5">
-                Our Works
+                Portfolio
             </h3>
             {workItems.map((item) => (
                 <div key={item.id} className="flex md:flex-row flex-col justify-evenly container py-20 border-b-2 group">
@@ -25,21 +24,22 @@ export default function Works() {
                                 </div>
                             </div>
                         </div>
-                        <button
-                            type="button"
+                        <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="flex items-end gap-4 group/button">
-                            <span className="text-xl ">Project Details</span> <MdOutlineArrowOutward className="text-3xl group-hover/button:rotate-45 group-hover/button:translate-x-5 duration-500"/>
-                        </button>
+                            <span className="text-xl ">Ver en YouTube</span> <MdOutlineArrowOutward className="text-3xl group-hover/button:rotate-45 group-hover/button:translate-x-5 duration-500"/>
+                        </a>
                     </div>
                     <div className="flex flex-col">
                         <div className="w-[100vw] md:w-[80vh] h-[50vh] overflow-hidden rounded-3xl relative bg-black">
-                            <Image
-                                src={item.img}
-                                alt={item.title}
-                                fill
-                                className="object-cover group-hover:scale-105 duration-300"
-                                loading="lazy"
-                                quality={75} // Optional: Adjust the quality for better performance
+                            <iframe
+                                src={`https://www.youtube.com/embed/${item.videoId}`}
+                                title={item.title}
+                                className="w-full h-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
                             />
                         </div>
                     </div>

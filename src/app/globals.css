@@ -158,3 +158,12 @@ html.lenis, html.lenis body {
 .orbStyle {
   animation: slideFadeInUp 1s ease forwards;
 }
+
+/* Moon gray filter - converts orange sphere to gray moon */
+.moon-orb-container {
+  filter: grayscale(100%) brightness(0.8) contrast(1.2);
+}
+
+.moon-orb-container canvas {
+  filter: hue-rotate(180deg) saturate(0%);
+}

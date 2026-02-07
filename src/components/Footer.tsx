@@ -80,7 +80,7 @@ export function Footer() {
         <footer className="flex relative flex-col container py-12 h-screen justify-evenly">
             <div className='flex flex-col'>
                 <ul className="flex flex-col gap-5 uppercase w-24">
-                    {['About', 'Services', 'Works', 'Contact'].map((text, index) => (
+                    {['Nosotros', 'Precios', 'Portfolio', 'Contacto'].map((text, index) => (
                         <li
                             key={index}
                             ref={(el) => { listItemsRef.current[index] = el; }}
@@ -93,34 +93,30 @@ export function Footer() {
                 </ul>
             </div>
             <div className='relative overflow-hidden group/line py-12 mx-auto w-fit cursor-pointer'>
-                <h1 className='w-full text-[12vw] uppercase leading-none'>Let&apos;s Talk</h1>
+                <h1 className='w-full text-[12vw] uppercase leading-none'>Hablemos</h1>
                 <span className='block w-full bg-white h-3 -translate-x-full group-hover/line:translate-x-0 duration-500 opacity-0 group-hover/line:opacity-100' />
             </div>
             <div className='w-full flex flex-col md:flex-row gap-10 justify-between'>
                 <div className='flex gap-10 uppercase'>
                     <div className=' relative overflow-hidden group/line cursor-pointer'>
-                        <h1 className='leading-none pb-2'>mail</h1>
+                        <h1 className='leading-none pb-2'>instagram</h1>
                         <span className='block bg-white h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500' />
                     </div>
                     <div className=' relative overflow-hidden group/line cursor-pointer'>
-                        <h1 className='leading-none pb-2'>github</h1>
+                        <h1 className='leading-none pb-2'>youtube</h1>
                         <span className='block bg-white h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500' />
                     </div>
                     <div className=' relative overflow-hidden group/line cursor-pointer'>
-                        <h1 className='leading-none pb-2'>behance</h1>
+                        <h1 className='leading-none pb-2'>tiktok</h1>
                         <span className='block bg-white h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500' />
                     </div>
                     <div className=' relative overflow-hidden group/line cursor-pointer'>
-                        <h1 className='leading-none pb-2'>dribble</h1>
-                        <span className='block bg-white h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500' />
-                    </div>
-                    <div className=' relative overflow-hidden group/line cursor-pointer'>
-                        <h1 className='leading-none pb-2'>linkedin</h1>
+                        <h1 className='leading-none pb-2'>email</h1>
                         <span className='block bg-white h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500' />
                     </div>
                 </div>
                 <div className='flex gap-10 uppercase'>
-                    <span>2024 © CharltonK.dev</span>
+                    <span>2026 © Moon Productions</span>
                 </div>
             </div>
         </footer>
