@@ -5,7 +5,7 @@ export default function Works() {
     return (
         <section id="works" className="relative flex flex-col w-full h-full bg-black py-20">
             <h3 className="text-xl text-white z-50 container pb-5">
-                Portfolio
+                Proyectos
             </h3>
             {workItems.map((item) => (
                 <div key={item.id} className="flex md:flex-row flex-col justify-evenly container py-20 border-b-2 group">

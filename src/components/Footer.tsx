@@ -80,7 +80,7 @@ export function Footer() {
         <footer className="flex relative flex-col container py-12 h-screen justify-evenly">
             <div className='flex flex-col'>
                 <ul className="flex flex-col gap-5 uppercase w-24">
-                    {['Nosotros', 'Precios', 'Portfolio', 'Contacto'].map((text, index) => (
+                    {['Nosotros', 'Precios', 'Proyectos', 'Contacto'].map((text, index) => (
                         <li
                             key={index}
                             ref={(el) => { listItemsRef.current[index] = el; }}

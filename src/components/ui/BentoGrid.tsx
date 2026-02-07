@@ -119,16 +119,18 @@ export const BentoGridItem = ({
         >
           {/* Show icon and price for pricing cards */}
           {icon && price && (
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-5xl">{icon}</span>
-              <span className="text-3xl font-bold text-white">{price}</span>
+            <div className="flex flex-col gap-4 mb-6">
+              <div className="flex items-center justify-between">
+                <span className="text-6xl">{icon}</span>
+                <span className="text-4xl font-bold text-white bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">{price}</span>
+              </div>
             </div>
           )}
 
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
           {/* remove mb-2 mt-2 */}
           <div
-            className={"font-sans text-lg lg:text-3xl max-w-96 font-bold z-10"}
+            className={`font-sans ${icon && price ? 'text-2xl lg:text-4xl' : 'text-lg lg:text-3xl'} max-w-96 font-bold z-10 ${icon && price ? 'mb-4' : ''}`}
           >
             {title}
           </div>
@@ -170,7 +172,7 @@ export const BentoGridItem = ({
 
               <button
                 type="button"
-                className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center creativeBtn" >
+                className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center hover:bg-gray-200 transition-colors duration-300" >
                 <span>Hablemos</span>
               </button>
             </div>
