@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <section id="services" className="w-full flex flex-col relative bg-grid-white/[0.05] py-20">
       <h3 className="text-xl text-white z-50 container pb-5">
-        Our Services
+        Precios
       </h3>
       <>
         <div className="absolute pointer-events-none inset-0 top-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
@@ -23,14 +23,15 @@ const Services = () => {
               key={i}
               title={item.title}
               description={item.description}
-              // remove icon prop
-              // remove original classname condition
               className={item.className}
               img={item.img}
               imgClassName={item.imgClassName}
               titleClassName={item.titleClassName}
               descriptionClassName={item.descriptionClassName}
               spareImg={item.spareImg}
+              price={item.price}
+              icon={item.icon}
+              isCTA={item.isCTA}
             />
           ))}
         </BentoGrid>

@@ -36,6 +36,9 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
+  price,
+  icon,
+  isCTA,
 }: {
   className?: string;
   id: number;
@@ -46,6 +49,9 @@ export const BentoGridItem = ({
   titleClassName?: string;
   descriptionClassName?: string;
   spareImg?: string;
+  price?: string;
+  icon?: string;
+  isCTA?: boolean;
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
@@ -83,7 +89,7 @@ export const BentoGridItem = ({
       }}
     >
       {/* add img divs */}
-      <div className={`${id === 7 && "flex justify-center"} h-full`}>
+      <div className={`${id === 4 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
             <img
@@ -113,11 +119,20 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
+          {/* Show icon and price for pricing cards */}
+          {icon && price && (
+            <div className="flex flex-col gap-4 mb-6">
+              <div className="flex items-center justify-between">
+                <span className="text-6xl">{icon}</span>
+                <span className="text-4xl font-bold text-white bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">{price}</span>
+              </div>
+            </div>
+          )}
 
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
           {/* remove mb-2 mt-2 */}
           <div
-            className={"font-sans text-lg lg:text-3xl max-w-96 font-bold z-10"}
+            className={`font-sans ${icon && price ? 'text-2xl lg:text-4xl' : 'text-lg lg:text-3xl'} max-w-96 font-bold z-10 ${icon && price ? 'mb-4' : ''}`}
           >
             {title}
           </div>
@@ -132,20 +147,9 @@ export const BentoGridItem = ({
           {/* for the github 3d globe */}
           {/*id === 2 && <GridGlobe />
           }*/}
-          {id === 1 &&
-            <div className="absolute top-52 md:top-12 z-0">
-              <WebsiteMockup />
-            </div>
-          }
-          {id === 5 && <Soda />}
 
-          {/* Tech stack list div */}
-          {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <ProgLangList />
-            </div>
-          )}
-          {id === 7 && (
+
+          {id === 4 && (
             <div className="mt-5 relative">
               {/* button border magic from tailwind css buttons  */}
               {/* add rounded-md h-8 md:h-8, remove rounded-full */}
@@ -157,11 +161,11 @@ export const BentoGridItem = ({
               >
               </div>
 
-              <button
-                type="button"
-                className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center creativeBtn" >
-                <span>Let&apos;s Talk</span>
-              </button>
+              <a
+                href="#contact"
+                className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center hover:bg-gray-200 transition-colors duration-300 inline-block" >
+                <span>Hablemos</span>
+              </a>
             </div>
           )}
         </div>
