@@ -38,6 +38,7 @@ export const BentoGridItem = ({
   spareImg,
   price,
   icon,
+  isCTA,
 }: {
   className?: string;
   id: number;
@@ -50,6 +51,7 @@ export const BentoGridItem = ({
   spareImg?: string;
   price?: string;
   icon?: string;
+  isCTA?: boolean;
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];

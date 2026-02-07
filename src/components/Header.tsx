@@ -4,15 +4,14 @@ import Image from 'next/image'
 const Header = () => {
   return (
     <header className='w-full flex items-center relative justify-between'>
-        <div className='flex items-center gap-3'>
+        <div className='flex items-center'>
             <Image 
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/moon_productions_log-SplLyEpl617gS1Wj6IfUHDnE1IWeWw.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-J0BZCv2vqmwQiV4k0CGTYdmTlHyqUZ.png"
                 alt="Moon Productions"
-                width={50}
-                height={50}
+                width={180}
+                height={60}
                 className="object-contain"
             />
-            <span className='text-2xl font-bold'>Moon Productions</span>
         </div>
         <div className='flex items-center gap-10'>
             <ul className='flex gap-10 text-gray-400'>

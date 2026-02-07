@@ -31,6 +31,7 @@ const Services = () => {
               spareImg={item.spareImg}
               price={item.price}
               icon={item.icon}
+              isCTA={item.isCTA}
             />
           ))}
         </BentoGrid>

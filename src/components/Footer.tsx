@@ -77,7 +77,7 @@ export function Footer() {
     }, []);
 
     return (
-        <footer className="flex relative flex-col container py-12 h-screen justify-evenly">
+        <footer className="flex relative flex-col container py-12 h-screen justify-evenly bg-black">
             <div className='flex flex-col'>
                 <ul className="flex flex-col gap-5 uppercase w-24">
                     {['Nosotros', 'Precios', 'Proyectos', 'Contacto'].map((text, index) => (

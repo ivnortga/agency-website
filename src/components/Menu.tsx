@@ -6,15 +6,14 @@ import Image from 'next/image';
 const Menu = () => {
   return (
     <div className='flex justify-between items-center w-full fixed z-50 px-12 py-6'>
-        <div className='flex items-center gap-3 text-white text-xl font-semibold pt-9'>
+        <div className='flex items-center text-white text-xl font-semibold pt-9'>
             <Image 
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/moon_productions_log-SplLyEpl617gS1Wj6IfUHDnE1IWeWw.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-J0BZCv2vqmwQiV4k0CGTYdmTlHyqUZ.png"
                 alt="Moon Productions"
-                width={40}
-                height={40}
+                width={180}
+                height={60}
                 className="object-contain"
             />
-            <span>Moon Productions</span>
         </div>
         <>
             <CanvasMenu />
