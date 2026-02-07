@@ -9,11 +9,11 @@ export default function Hero() {
             <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"
-                fill="orange"
+                fill="white"
             />
             <Spotlight
                 className="-top-40 left-20 md:left-80 md:-top-20"
-                fill="blue"
+                fill="gray"
             />
             
             <HeroContent />
