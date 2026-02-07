@@ -148,14 +148,7 @@ export const BentoGridItem = ({
           {/*id === 2 && <GridGlobe />
           }*/}
 
-          {id === 5 && <Soda />}
 
-          {/* Tech stack list div */}
-          {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <ProgLangList />
-            </div>
-          )}
           {id === 4 && (
             <div className="mt-5 relative">
               {/* button border magic from tailwind css buttons  */}
@@ -168,11 +161,11 @@ export const BentoGridItem = ({
               >
               </div>
 
-              <button
-                type="button"
-                className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center hover:bg-gray-200 transition-colors duration-300" >
+              <a
+                href="#contact"
+                className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center hover:bg-gray-200 transition-colors duration-300 inline-block" >
                 <span>Hablemos</span>
-              </button>
+              </a>
             </div>
           )}
         </div>

@@ -77,25 +77,32 @@ export function Footer() {
     }, []);
 
     return (
-        <footer className="flex relative flex-col container py-12 h-screen justify-evenly bg-black">
+        <footer id="contact" className="flex relative flex-col container py-12 h-screen justify-evenly bg-black">
             <div className='flex flex-col'>
                 <ul className="flex flex-col gap-5 uppercase w-24">
-                    {['Nosotros', 'Precios', 'Proyectos', 'Contacto'].map((text, index) => (
+                    {[
+                        { text: 'Nosotros', href: '#about' },
+                        { text: 'Precios', href: '#services' },
+                        { text: 'Proyectos', href: '#works' },
+                        { text: 'Contacto', href: '#contact' }
+                    ].map((item, index) => (
                         <li
                             key={index}
                             ref={(el) => { listItemsRef.current[index] = el; }}
                             className="relative overflow-hidden h-5 cursor-pointer"
                         >
-                            <span className="block initial absolute top-0 left-0 w-full h-full">{text}</span>
-                            <span className="block hover absolute top-0 left-0 w-full h-full">{text}</span>
+                            <a href={item.href} className="block">
+                                <span className="block initial absolute top-0 left-0 w-full h-full">{item.text}</span>
+                                <span className="block hover absolute top-0 left-0 w-full h-full">{item.text}</span>
+                            </a>
                         </li>
                     ))}
                 </ul>
             </div>
-            <div className='relative overflow-hidden group/line py-12 mx-auto w-fit cursor-pointer'>
+            <a href='#contact' className='relative overflow-hidden group/line py-12 mx-auto w-fit cursor-pointer'>
                 <h1 className='w-full text-[12vw] uppercase leading-none'>Hablemos</h1>
                 <span className='block w-full bg-white h-3 -translate-x-full group-hover/line:translate-x-0 duration-500 opacity-0 group-hover/line:opacity-100' />
-            </div>
+            </a>
             <div className='w-full flex flex-col md:flex-row gap-10 justify-between'>
                 <div className='flex gap-10 uppercase'>
                     <div className=' relative overflow-hidden group/line cursor-pointer'>

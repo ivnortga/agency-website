@@ -35,7 +35,7 @@ const About = () => {
   }, [hasAnimated]);
 
   return (
-    <div className='relative flex flex-col w-full h-screen p-12 lg:p-24 justify-center items-center bg-black z-10'>
+    <div id="about" className='relative flex flex-col w-full h-screen p-12 lg:p-24 justify-center items-center bg-black z-10'>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}

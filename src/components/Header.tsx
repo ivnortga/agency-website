@@ -15,13 +15,13 @@ const Header = () => {
         </div>
         <div className='flex items-center gap-10'>
             <ul className='flex gap-10 text-gray-400'>
-                <li>Inicio</li>
-                <li>Sobre Nosotros</li>
-                <li>Precios</li>
-                <li>Proyectos</li>
-                <li>Contacto</li>
+                <li><a href="#home" className="hover:text-white transition-colors">Inicio</a></li>
+                <li><a href="#about" className="hover:text-white transition-colors">Sobre Nosotros</a></li>
+                <li><a href="#services" className="hover:text-white transition-colors">Precios</a></li>
+                <li><a href="#works" className="hover:text-white transition-colors">Proyectos</a></li>
+                <li><a href="#contact" className="hover:text-white transition-colors">Contacto</a></li>
             </ul>
-            <span className='text-xl font-semibold'>Hablemos</span>
+            <a href="#contact" className='text-xl font-semibold hover:text-gray-300 transition-colors'>Hablemos</a>
         </div>
         
     </header>
